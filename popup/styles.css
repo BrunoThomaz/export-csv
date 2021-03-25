@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #6C6681;
+}
+
+
+h2 {
+    padding: .5em;
+    color: #1E0969;
+}
+
+p {
+    max-width: 300px;
+    color: #FEFEFE;
+    padding: 1em;
+    font-size: .8em;
+}

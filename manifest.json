@@ -1,0 +1,36 @@
+{
+
+    "manifest_version": 2,
+    "name": "PJE-JFCE-ExportCSV",
+    "version": "1.0",
+  
+    "description": "Exporta o resultado de uma pesquisa no site https://pje.jfce.jus.br/pje/ConsultaPublica/listView.seam para um arquivo .CSV que pode ser trabalhado no Excel ou outro programa de planilha",
+    "homepage_url": "https://github.com/BrunoThomaz/export-csv/",
+    "icons": {
+      "48": "src/icons/icon-48.png",
+      "96": "src/icons/icon-96.png"
+    },
+    "permissions": [
+      "https://pje.jfce.jus.br/pje/ConsultaPublica/listView.seam/*",
+      "webRequest",
+      "activeTab",
+      "tabs"
+    ],
+    "browser_action": {
+      "default_icon": "src/icons/icon-32.png",
+      "default_title": "Salvar CSV",
+      "default_popup": "popup/popup.html"
+    },
+
+    "web_accessible_resources": [
+      "src/icons/icon.svg"
+    ],
+
+    "content_scripts": [
+      {
+        "matches": ["https://pje.jfce.jus.br/pje/ConsultaPublica/listView.seam"],
+        "js": ["exportCSV.js"]
+      }
+    ]
+  
+  }
